@@ -1,0 +1,1 @@
+-fixare la cors origin causata dalla fetch dello script JS
