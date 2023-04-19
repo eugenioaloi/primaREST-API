@@ -1,7 +1,7 @@
 var btnMostra = document.querySelector('#btnMostra');
 var stampaUt = document.querySelector('#stampaUtenti');
 
-var usersUrl = "http://localhost:8081/java-prima-api/users";
+var usersUrl = "http://localhost:8081/java-prima-api/utenti";
 
 function stampaUtenti(){
 
@@ -9,10 +9,12 @@ function stampaUtenti(){
   fetch(usersUrl)
   .then(data =>{return data.json()})
   .then(res=>{
-    res.forEach(ut => {//stampa il risultato nei li
-      stampaUt.innerHTML += `<li> ${ut.nome} ${ut.cognome} - ${ut.email} </li>`
+    console.log(res);
+    let utenti = res.data;
+
+    utenti.forEach(ut => {
+      stampaUt.innerHTML += `<li>${ut.nome}${ut.cognome} - ${ut.email}</li>`
     });
-   
   })
   
 }
