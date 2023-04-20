@@ -1,7 +1,7 @@
 var btnMostra = document.querySelector('#btnMostra');
 var stampaUt = document.querySelector('#stampaUtenti');
 
-var usersUrl = "http://localhost:8081/java-prima-api/utenti";
+var usersUrl = "http://localhost:8080/java-prima-api/utenti";
 
 function stampaUtenti(){
 
